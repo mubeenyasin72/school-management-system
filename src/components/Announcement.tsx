@@ -26,14 +26,8 @@ const Announcement = () => {
   return (
     <div className="p-4 bg-white rounded-xl">
       <div className="flex justify-between items-center">
-        <h1 className="texr-lg font-semibold my-4">Accouncements</h1>
-        <Image
-          src={"/moreDark.png"}
-          alt=""
-          width={20}
-          height={20}
-          className="cursor-pointer"
-        />
+        <h1 className="text-lg font-semibold my-4">Accouncements</h1>
+        <span className="text-xs text-gray-500 cursor-pointer">View all</span>
       </div>
       <div className="flex flex-col gap-4">
         {events.map((event) => (
@@ -43,7 +37,9 @@ const Announcement = () => {
           >
             <div className="flex justify-between items-center">
               <h2 className="text-md text-gray-600">{event.title}</h2>
-              <span className="text-xs text-black bg-white rounded-md p-1">{event.time}</span>
+              <span className="text-xs text-black bg-white rounded-md p-1">
+                {event.time}
+              </span>
             </div>
             <p className="mt-2 text-gray-400 text-xs">{event.description}</p>
           </div>
