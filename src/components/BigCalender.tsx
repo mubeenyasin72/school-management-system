@@ -8,23 +8,25 @@ import { calendarEvents } from "@/lib/data";
 const localizer = momentLocalizer(moment);
 
 const BigCalender = () => {
-    const [view, setView] = useState<View>(Views.WORK_WEEK);
-    const handleOnChangeView = (newView: View) => {
-        setView(newView);
-    }
+  const [view, setView] = useState<View>(Views.WORK_WEEK);
+
+  const handleOnChangeView = (selectedView: View) => {
+    setView(selectedView);
+  };
+
   return (
-      <Calendar
-        localizer={localizer}
-        events={calendarEvents}
-        startAccessor="start"
-        endAccessor="end"
-        views={["work_week", "day"]}
-        view= {view}
-          style={{ height: "98%" }}
-          onView={handleOnChangeView}
-          min={new Date(2025, 10, 0, 8, 0)}
-          max={new Date(2025, 10, 0, 20, 0)}
-      />
+    <Calendar
+      localizer={localizer}
+      events={calendarEvents}
+      startAccessor="start"
+      endAccessor="end"
+      views={["work_week", "day"]}
+      view={view}
+      style={{ height: "98%" }}
+      onView={handleOnChangeView}
+      min={new Date(2025, 1, 0, 8, 0, 0)}
+      max={new Date(2025, 1, 0, 17, 0, 0)}
+    />
   );
 };
 
