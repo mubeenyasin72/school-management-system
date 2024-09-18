@@ -81,12 +81,12 @@ const TeacherList = () => {
                 <Image src="/view.png" alt="" width={16} height={16} />
               </button>
             </Link>
-            {/* {role === "admin" && ( */}
+            {role === "admin" && (
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-Purple">
               <Image src="/delete.png" alt="" width={16} height={16} />
             </button>
-            {/* <FormModal table="teacher" type="delete" id={item.id}/>
-          )} */}
+          )}
+            {/* <FormModal table="teacher" type="delete" id={item.id}/> */}
           </div>
         </td>
       </tr>
