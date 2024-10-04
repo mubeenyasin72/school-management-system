@@ -6,7 +6,7 @@ import Link from "next/link";
 import { role, parentsData } from "@/lib/data"
 const ParentList = () => {
   return (
-    <div className=''>Parent List data</div>
+    <div className=''>Parent List</div>
   )
 }
 
