@@ -916,31 +916,34 @@ export const announcementsData = [
 ];
 
 // YOU SHOULD CHANGE THE DATES OF THE EVENTS TO THE CURRENT DATE TO SEE THE EVENTS ON THE CALENDAR
+const today = new Date();
+const tomorrow = new Date();
+tomorrow.setDate(today.getDate() + 1);
 export const calendarEvents = [
-  {
-    title: "Math",
-    allDay: false,
-    start: new Date(2024, 8, 10, 12, 0),
-    end: new Date(2024, 8, 10, 12, 45),
-  },
-  {
-    title: "English",
-    allDay: false,
-    start: new Date(2024, 8, 10, 13, 0),
-    end: new Date(2024, 8, 10, 13, 45),
-  },
-  {
-    title: "Biology",
-    allDay: false,
-    start: new Date(2024, 8, 10, 14, 0),
-    end: new Date(2024, 8, 10, 14, 45),
-  },
-  {
-    title: "Physics",
-    allDay: false,
-    start: new Date(2024, 8, 10, 15, 0),
-    end: new Date(2024, 8, 10, 15, 45),
-  },
+ {
+      title: "Math",
+      allDay: false,
+      start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 9, 0),
+      end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 9, 45),
+    },
+    {
+      title: "English",
+      allDay: false,
+      start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 10, 0),
+      end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 10, 45),
+    },
+    {
+      title: "Biology",
+      allDay: false,
+      start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11, 0),
+      end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11, 45),
+    },
+    {
+      title: "Physics",
+      allDay: false,
+      start: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 0),
+      end: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 45),
+    },
 
   {
     title: "Math",
